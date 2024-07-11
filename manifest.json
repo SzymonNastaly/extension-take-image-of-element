@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Take image of element",
+  "version": "1.0.0",
+  "description": "Taking images of specific html elements",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "action": {},
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "content-script.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}
