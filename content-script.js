@@ -24,7 +24,7 @@ function cropImage(dataUrl, rect, devicePixelRatio) {
   });
 }
 
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+chrome.runtime.onMessage.addListener((request) => {
   if (request.action === "captureAndCrop") {
     // Assume we have a way to select the target element, e.g., by ID
     const targetElement = document.getElementsByClassName('lnXdpd')[0];
